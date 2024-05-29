@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <PublishAot>true</PublishAot>
+        <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
+        <NativeLib Condition="'$(DontSetNativeLib)'!='true'">Shared</NativeLib>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(DontSetSysroot)'!='true'">
+        <!-- TODO - actual min & path -->
+        <LinkerArg Include="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk" />
+        <LinkerArg Include="-mios-version-min=16.0" />
+    </ItemGroup>
+</Project>
