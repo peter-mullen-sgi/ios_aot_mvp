@@ -5,6 +5,7 @@
         <PublishAot>true</PublishAot>
         <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
         <NativeLib Condition="'$(DontSetNativeLib)'!='true'">Shared</NativeLib>
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(DontSetSysroot)'!='true'">
