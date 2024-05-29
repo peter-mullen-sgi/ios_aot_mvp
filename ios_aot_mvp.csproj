@@ -8,7 +8,7 @@
         <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
     </PropertyGroup>
 
-    <ItemGroup Condition="'$(DontSetSysroot)'!='true'">
+    <ItemGroup Condition="'$(SetSysroot)'=='true'">
         <!-- TODO - actual min & path -->
         <LinkerArg Include="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk" />
         <LinkerArg Include="-mios-version-min=16.0" />
